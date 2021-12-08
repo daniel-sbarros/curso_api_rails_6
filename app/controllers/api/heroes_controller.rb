@@ -48,7 +48,7 @@ class Api::HeroesController < ApplicationController
     def set_hero
       @hero = Hero.find(params[:id])
     end
-
+    
     # Only allow a list of trusted parameters through.
     def hero_params
       params.require(:hero).permit(:name)
